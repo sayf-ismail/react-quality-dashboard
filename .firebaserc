@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "quality-dashboard-produc-27568"
+    "default": "quality-dashboard-produc-27568",
+    "staging": "quality-dashboard-stagin-1fe3d"
   }
 }
