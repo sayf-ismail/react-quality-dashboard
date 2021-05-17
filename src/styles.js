@@ -4,6 +4,17 @@ export const useStyles = makeStyles((theme) => ({
   appRoot: {
     display: 'flex',
   },
+  appBar: {
+    backgroundColor: "#6EC177",
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    }
+  },
+  appBarSpacer: {
+    [theme.breakpoints.down('xs')]: {
+      ...theme.mixins.toolbar,
+    }
+  },
   navigationLogo: {
     width: '50%',
     cursor: "pointer",
@@ -20,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
     whiteSpace: "nowrap",
     overflowX: "hidden",
     position: "relative",
-    // height: "100vh",
+    height: "100vh",
   },
   navigationDrawerCollapse: {
     width: theme.spacing(9),

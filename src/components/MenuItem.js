@@ -13,7 +13,7 @@ import { useStyles } from '../styles';
 import clsx from 'clsx'
 import { Link, useLocation } from 'react-router-dom';
 
-const MenuItem = ({label, icon, activeIcon, path}) => {
+const MenuItem = ({label, icon, activeIcon, path, onClick}) => {
   const classes = useStyles();
   const [active, setActive] = useState(true);
   const location = useLocation();
@@ -27,7 +27,13 @@ const MenuItem = ({label, icon, activeIcon, path}) => {
   }, [location])
 
   return (
-    <ListItem button component={Link} to={path} className={clsx(classes.menuItem, active && classes.menuItemActive)}>
+    <ListItem 
+      button 
+      component={Link} 
+      to={path} 
+      className={clsx(classes.menuItem, active && classes.menuItemActive)}
+      onClick={onClick}
+    >
       <ListItemIcon>
         <Icon>
           <img 
